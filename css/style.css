@@ -75,6 +75,11 @@ h1 span:last-child {
     padding-left: 2.75rem;
 }
 
+.app_buttons {
+    z-index: 2;
+    width: 100%;
+}
+
 .button {
     display: flex;
     justify-content: left;
@@ -220,7 +225,6 @@ p {
 div.square_numerator {
     position: absolute;
     top: -6rem;
-    /* left: 1.25rem; */
     display: flex;
     width: 4.5rem;
     height: 4.5rem;
@@ -297,3 +301,179 @@ div.square_numerator {
     width: 3.75rem;
     margin: auto;
 }
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media (min-width: 641px) and (max-width: 960px) {
+
+    .header {
+        padding: 2rem 2rem 5.25rem;
+        background-image: url("../images/football_1280.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 160%;
+        align-items: center;
+    }   
+   
+    h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+
+    h1 span:last-child {
+        margin-top: 2rem;
+        padding-left: 6.75rem;
+    }
+
+    .app_buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+        background-color: #5e42b0;
+        width: 45%;
+        height: 4.75rem;
+        border-radius: 4.75rem;
+        font-family: OpenSans-Regular;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #fff;
+        padding-left: 3.5rem;   
+        z-index: 2;  
+    }
+
+    h2 {
+        font-size: 5rem;
+        padding: 0 2rem;
+        margin-top: 5.25rem;
+        margin-bottom: 1.25rem;
+        padding-left: 40%;
+    }
+    
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .numerator {
+        font-size: 1.25rem;
+        margin-right: 0.75rem;
+    }
+    
+    .numerator::after {
+        content: "";
+        width: 100%;
+        display: block;
+        border-bottom: 0.313rem solid #5e42b0;
+        border-radius: 0.313rem;
+    }
+    
+    p {
+        font-family: OpenSans-Regular;
+        font-size: 1rem;
+    }
+
+    .article_logo {
+        position: absolute;
+        padding-top: 1rem;
+        left: 0;
+        transform: translate(-35%);
+    }
+
+    .connection {
+        background-color: #fff;
+    }
+
+    .connection, .collaboration, .growth {
+        padding: 2.5rem 2rem;
+        padding-left: 40%;
+    }
+
+    .players .connection, .players .collaboration, .players .growth {
+        padding: 2.5rem 2rem;
+        padding-right: 40%;
+    }
+
+    .players h2 {
+        padding-right: 40%;
+        padding-left: 2rem;
+    }
+
+    .players .article_logo {
+        position: absolute;
+        margin-top: -1.5rem;
+        right: 0;
+        left: auto;
+        transform: translate(0);
+    }
+
+    .article_content_big_block {
+        padding: 0 2rem;
+    }
+
+    .article_content_big_block h3 {
+        font-size: 5rem;
+        color: #e7e7e7;
+        margin-top: 3.25rem;
+    }
+
+    div.square_numerator {
+        top: -10rem;
+        width: 7.25rem;
+        height: 7.25rem;
+    }
+
+    .article_content_big_block p {
+        font-size: 1.5rem;
+    }
+    
+    
+    .footer {
+        padding: 0 2rem 1.5rem;
+        background-image: url("../images/game_1280.jpg");
+        background-position: right bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .footer h2 {
+        font-size: 5rem;
+        padding: 0;
+        z-index: 2;
+    }
+    
+    .footer h3 {
+        font-family: OpenSans-Regular;
+        font-size: 2rem;
+        padding: 0;
+        margin-bottom: 17.75rem;
+        color: #9b8ec1;
+        z-index: 2;
+    }
+
+    .surface_logo_wrapper {
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 2rem;
+        display: flex;
+        margin-top: 6.5rem;
+        margin-bottom: 3.75rem;
+        z-index: 2;
+    }
+    
+    .footer .google_play_btn {
+        margin-bottom: 5rem;
+    }
+    
+    .surface_logo {
+        fill: #fff;
+        width: 5.25rem;
+        margin: auto;
+    }
+}
+
