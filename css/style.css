@@ -246,7 +246,7 @@ div.square_numerator {
     background-color: #0a0e34;
     padding: 0 1.25rem 0.75rem;
     background-image: url("../images/game_767.jpg");
-    background-position: 95% bottom;
+    background-position: right bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
