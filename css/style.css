@@ -9,7 +9,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, article, footer, heade
 }
 
 body {
-	line-height: 1.2;
+    line-height: 1.2;
 }
 /* конец кода сброса стилей браузера */
 
@@ -112,4 +112,126 @@ h1 span:last-child {
 }
 
 /* MAIN CONTENT */
+.main_content {
+    position: relative;
+}
 
+h2 {
+    font-family: OpenSans-Bold;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #e7e7e7;
+    padding: 0 1.25rem;
+    padding-top: 1.5rem;
+    padding-bottom: 14.25rem;
+    z-index: 99;
+}
+
+h3 {
+    font-family: OpenSans-Bold;
+    font-size: 1.5rem;
+    color: #c1c1c1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.numerator {
+    font-family: OpenSans-Bold;
+    font-size: 0.875rem;
+    color: #000;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.numerator::after {
+    content: "";
+    width: 100%;
+    display: block;
+    border-bottom: 0.25rem solid #5e42b0;
+    border-radius: 0.25rem;
+}
+
+p {
+    font-family: OpenSans-Regular;
+    font-size: 1rem;
+}
+
+.connection, .collaboration, .growth {
+    padding: 0 1.25rem;
+    padding-top: 3.75rem;
+    padding-bottom: 3.5rem;
+}
+
+.article_logo {
+    position: absolute;
+    padding-top: 5rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.players .article_logo {
+    padding-left: 0;
+}
+
+.growth .numerator::after {
+    border-color: #fff;
+}
+
+.growth_players .numerator {
+    color: #8765dd;
+}
+
+.connection {
+    background-color: #fafafa;
+    padding-top: 5.25rem;
+    z-index: 0;
+}
+
+.collaboration {
+    background-color: #f5f4f9;
+}
+
+.growth_athlets {
+    background-color: #5e42b0;
+    color: #fff;
+}
+
+.growth_players {
+    background-color: #090c35;
+    color: #fff;
+}
+
+.full_logo {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+.article_content_big_block {
+    position: relative;
+    padding: 0 1.25rem;
+    margin-bottom: 5rem;
+}
+
+.article_content_big_block h3 {
+    margin-bottom: 1.5rem;
+}
+
+div.square_numerator {
+    position: absolute;
+    top: -6rem;
+    /* left: 1.25rem; */
+    display: flex;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #5e42b0;
+}
+
+.square_numerator .numerator {
+    margin: auto;
+    color: #fff;
+}
+
+.square_numerator .numerator::after {
+    border-color: #8f7bc8;
+}
