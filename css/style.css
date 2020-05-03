@@ -16,12 +16,12 @@ body {
 /* Подключение шрифтов */
 @font-face {
     font-family: OpenSans-Regular;
-    src: url("fonts/OpenSans-Regular.woff") format("woff"), url("fonts/OpenSans-Regular.woff2") format("woff2");
+    src: url("/fonts/OpenSans-Regular.woff") format("woff"), url("/fonts/OpenSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: OpenSans-Bold;
-    src: url("fonts/OpenSans-Bold.woff") format("woff"), url("fonts/OpenSans-Bold.woff2") format("woff2");
+    src: url("/fonts/OpenSans-Bold.woff") format("woff"), url("/fonts/OpenSans-Bold.woff2") format("woff2");
 }
 
 /* HEADER */
@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     background-color: #0a0e34;
     padding: 2rem 1.25rem 5.25rem;
-    background-image: url("images/football_767.jpg");
+    background-image: url("/images/football_767.jpg");
     background-repeat: no-repeat;
     background-position: -78px -28px;
     background-size: 145%;
