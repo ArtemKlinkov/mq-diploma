@@ -310,8 +310,8 @@ div.square_numerator {
         padding: 2rem 2rem 5.25rem;
         background-image: url("../images/football_1280.jpg");
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: 160%;
+        background-position: center top;
+        /* background-size: 160%; */
         align-items: center;
     }   
    
@@ -476,4 +476,3 @@ div.square_numerator {
         margin: auto;
     }
 }
-
