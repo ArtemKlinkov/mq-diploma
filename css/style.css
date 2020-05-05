@@ -266,6 +266,14 @@ div.square_numerator {
     opacity: 0.9;
 }
 
+.logo_n_caption {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    align-items: center;
+}
+
+
 .footer h2 {
     font-size: 2rem;
     padding: 0;
@@ -306,6 +314,11 @@ div.square_numerator {
 
 @media (min-width: 641px) and (max-width: 960px) {
 
+    .surface_logo_text {
+        /* width: 12.17%; */
+        max-width: 10rem;
+    }
+
     .header {
         padding: 2rem 2rem 5.25rem;
         background-image: url("../images/football_1280.jpg");
@@ -328,6 +341,10 @@ div.square_numerator {
     .app_buttons {
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .market_logo {
+        width: 2.75rem;
     }
 
     .button {
@@ -435,7 +452,7 @@ div.square_numerator {
     
     .footer {
         padding: 0 2rem 1.5rem;
-        background-image: url("../images/game_1280.jpg");
+        background-image: url("../images/game_1920.jpg");
         background-position: right bottom;
         background-size: cover;
         background-repeat: no-repeat;
@@ -468,6 +485,248 @@ div.square_numerator {
     
     .footer .google_play_btn {
         margin-bottom: 5rem;
+    }
+    
+    .surface_logo {
+        fill: #fff;
+        width: 5.25rem;
+        margin: auto;
+    }
+}
+
+@media (min-width: 960px) {
+
+    .surface_logo_text {
+        width: 12.17%;
+        min-width: 10rem;
+    }
+
+    .header {
+        padding: 2.75rem 11.25rem 6.25rem;
+        background-image: url("../images/football_1920.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        align-items: center;
+    }   
+   
+    h1 {
+        font-size: 5.75rem;
+        line-height: 5.75rem;
+        padding: 0 1rem;
+        width: 100%;
+        margin-top: 18rem;
+        margin-bottom: 14rem;
+    }
+
+    h1 span:last-child {
+        padding-left: 27%;
+    }
+
+    .app_buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .market_logo {
+        width: 20%;
+        max-width: 4.5rem;
+        min-width: 2rem;
+    }
+
+    .app_store_btn {
+        margin-right: 3.25rem;
+        margin-bottom: 0;
+    }
+
+    .button {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+        background-color: #5e42b0;
+        width: 20%;
+        min-width: 15rem;
+        height: 4.75rem;
+        border-radius: 4.75rem;
+        font-family: OpenSans-Regular;
+        font-size: 1rem;
+        padding-left: 3.25rem;   
+    }
+
+    h2 {
+        font-size: 5rem;
+        padding: 0 2rem;
+        margin-top: 7.25rem;
+        margin-bottom: 3rem;
+        padding-left: 55%;
+        line-height: 3.75rem;
+    }
+    
+    h3 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+    }
+    
+    .numerator {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+    }
+    
+    .numerator::after {
+        content: "";
+        width: 100%;
+        display: block;
+        border-bottom: 0.313rem solid #5e42b0;
+        border-radius: 0.313rem;
+    }
+    
+    p {
+        font-family: OpenSans-Regular;
+        font-size: 1.25rem;
+    }
+
+    .article_logo {
+        position: absolute;
+        padding-top: 0;
+        left: 20%;
+        transform: translate(0);
+        margin: -2rem;
+    }
+
+    .connection {
+        background-color: #fff;
+    }
+
+    .connection, .collaboration, .growth {
+        padding: 3.75rem 11.25rem;
+        padding-left: 55%;
+    }
+
+    .players .connection, .players .collaboration, .players .growth {
+        padding: 3.75rem 11.25rem;
+        padding-right: 55%;
+    }
+
+    .players h2 {
+        padding-right: 55%;
+        padding-left: 11.25rem;
+    }
+
+    .players .article_logo {
+        position: absolute;
+        margin: 0 7.5rem 0 0;
+        margin-top: -5rem;
+        right: 0;
+        left: auto;
+        transform: translate(0);
+    }
+
+    .article_big_block {
+        display: flex;
+    }
+
+    .article_big_block:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .article_big_block picture {
+        width: 50%;
+    }
+
+    .full_logo {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .article_content_big_block {
+        padding: 0; 
+        padding-right: 11.25rem;
+        padding-left: 8rem;
+        width: 50%;
+        margin: auto;
+    }
+
+    .article_big_block:nth-child(even) .article_content_big_block {
+        padding-left: 11.25rem;
+        padding-right: 8rem;
+    }
+
+    .article_content_big_block h3 {
+        font-size: 5rem;
+        color: #e7e7e7;
+        margin-bottom: 7.25rem;
+    }
+
+    div.square_numerator {
+        top: calc(50% - 9.75rem);
+        left: calc(-9.75rem * 0.5);
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+
+    .article_big_block:nth-child(even) .square_numerator {
+        left: auto;
+        right: calc(-9.75rem * 0.5);
+    }
+
+    .article_content_big_block p {
+        font-size: 1.5rem;
+    }
+    
+    
+    .footer {
+        padding: 0 2rem 1.5rem;
+        background-image: url("../images/game_1920.jpg");
+        background-position: right bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .footer h2 {
+        font-size: 5rem;
+        padding: 0;
+        line-height: 3.75rem;
+        z-index: 2;
+        margin: 0;
+    }
+    
+    .footer h3 {
+        font-family: OpenSans-Regular;
+        font-size: 2rem;
+        line-height: 2rem;
+        padding: 0;
+        margin: 1.5rem 0 0;
+        color: #9b8ec1;
+        z-index: 2;
+    }
+
+    .logo_n_caption {
+        display: flex;
+        flex-direction: row;
+        z-index: 2;
+        align-items: center;
+        margin: 14.25rem 0 9.5rem;
+
+    }
+
+    .surface_logo_wrapper {
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 2rem;
+        display: flex;
+        margin: 0;
+        z-index: 2;
+    }
+
+    .caption_footer {
+        margin-left: 2rem;
+    }
+    
+    .footer .google_play_btn {
+        margin-bottom: 16rem;
     }
     
     .surface_logo {
