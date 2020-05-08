@@ -9,7 +9,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, article, footer, heade
 }
 
 body {
-    line-height: 1.2;
+    min-width: 320px;
 }
 /* конец кода сброса стилей браузера */
 
@@ -49,28 +49,28 @@ body {
     opacity: 0.9;
 }
 
+.header_logo_link {
+    z-index: 2;
+    width: 47.5%;
+}
+
 .surface_logo_text {
     fill: #fff;
-    width: 47.5%;
     z-index: 2;
 }
 
-h1 {
+.header_title {
     font-family: OpenSans-Bold;
     font-size: 1.75em;
     text-transform: uppercase;
     color: #fff;
     margin-top: 8.5rem;
     margin-bottom: 5.5rem;
-    line-height: 1.75rem;
     z-index: 2;
 }
 
-h1 span {
+.header_title_br {
     display: block;
-}
-
-h1 span:last-child {
     margin-top: 1.75rem;
     padding-left: 2.75rem;
 }
@@ -78,23 +78,26 @@ h1 span:last-child {
 .app_buttons {
     z-index: 2;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .button {
     display: flex;
-    justify-content: left;
     align-items: center;
     text-decoration: none;
     background-color: #5e42b0;
     width: 100%;
+    max-width: 280px;
     height: 2.2rem;
     border-radius: 1rem;
     font-family: OpenSans-Regular;
     font-size: 0.5rem;
     text-transform: uppercase;
     color: #fff;
-    padding-left: 30%;   
-    z-index: 2;  
+    padding-left: 5rem;
+    z-index: 2;
 }
 
 .btn_caption {
@@ -121,18 +124,21 @@ h1 span:last-child {
     position: relative;
 }
 
-h2 {
+.article_content {
+    padding-top: 1rem;
+}
+
+.article_title {
     font-family: OpenSans-Bold;
     font-size: 3rem;
     text-transform: uppercase;
     color: #e7e7e7;
     padding: 0 1.25rem;
-    padding-top: 1.5rem;
-    padding-bottom: 14.25rem;
+    margin-bottom: 14rem;
     z-index: 99;
 }
 
-h3 {
+.sub_block_title {
     font-family: OpenSans-Bold;
     font-size: 1.5rem;
     color: #c1c1c1;
@@ -158,12 +164,12 @@ h3 {
     border-radius: 0.25rem;
 }
 
-p {
+.sub_block_text, .big_block_text {
     font-family: OpenSans-Regular;
     font-size: 1rem;
 }
 
-.connection, .collaboration, .growth {
+.sub_block {
     padding: 0 1.25rem;
     padding-top: 3.75rem;
     padding-bottom: 3.5rem;
@@ -173,7 +179,7 @@ p {
     position: absolute;
     padding-top: 5rem;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-52%);
 }
 
 .players .article_logo {
@@ -210,21 +216,27 @@ p {
 
 .full_logo {
     max-width: 100%;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 .article_content_big_block {
     position: relative;
-    padding: 0 1.25rem;
-    margin-bottom: 5rem;
+    padding: 2rem 1.25rem 5rem;
 }
 
-.article_content_big_block h3 {
+.big_block_title {
+    font-family: OpenSans-Bold;
+    font-size: 1.75rem;
+    color: #c1c1c1;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
-div.square_numerator {
+
+.square_numerator {
     position: absolute;
-    top: -6rem;
+    top: -4rem;
     display: flex;
     width: 4.5rem;
     height: 4.5rem;
@@ -248,7 +260,7 @@ div.square_numerator {
     flex-direction: column;
     align-items: center;
     background-color: #0a0e34;
-    padding: 0 1.25rem 0.75rem;
+    padding: 6.5rem 1.25rem 0.75rem;
     background-image: url("../images/game_767.jpg");
     background-position: right bottom;
     background-size: cover;
@@ -271,20 +283,29 @@ div.square_numerator {
     flex-direction: column;
     z-index: 2;
     align-items: center;
+    margin-bottom: 4.75rem;
 }
 
+.caption_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.footer h2 {
+.footer_title {
+    font-family: OpenSans-Bold;
+    text-transform: uppercase;
+    color: #e7e7e7;
     font-size: 2rem;
     padding: 0;
     z-index: 2;
 }
 
-.footer h3 {
+.footer_subtitle {
     font-family: OpenSans-Regular;
     font-size: 0.875rem;
+    text-transform: uppercase;
     padding: 0;
-    margin-bottom: 4.75rem;
     color: #9b8ec1;
     z-index: 2;
 }
@@ -295,13 +316,17 @@ div.square_numerator {
     background: linear-gradient(to top, #50329c, #7751db);
     border-radius: 1rem;
     display: flex;
-    margin-top: 6.5rem;
     margin-bottom: 3.75rem;
     z-index: 2;
 }
 
-.footer .google_play_btn {
+.footer .app_buttons {
     margin-bottom: 5rem;
+}
+
+.footer_logo_link {
+    z-index: 2;
+    width: 47.5%;
 }
 
 .surface_logo {
@@ -312,10 +337,9 @@ div.square_numerator {
 
 /* МЕДИА-ЗАПРОСЫ */
 
-@media (min-width: 641px) and (max-width: 960px) {
+@media (min-width: 641px) and (max-width: 959px) {
 
-    .surface_logo_text {
-        /* width: 12.17%; */
+    .header_logo_link, .footer_logo_link {
         max-width: 10rem;
     }
 
@@ -323,24 +347,28 @@ div.square_numerator {
         padding: 2rem 2rem 5.25rem;
         background-image: url("../images/football_1280.jpg");
         background-repeat: no-repeat;
-        background-position: center top;
-        /* background-size: 160%; */
-        align-items: center;
+        background-position: center bottom;
+        background-size: cover;
+        /* align-items: center; */
     }   
    
-    h1 {
+    .header_title {
         font-size: 4rem;
-        line-height: 4.5rem;
     }
 
-    h1 span:last-child {
-        margin-top: 2rem;
-        padding-left: 6.75rem;
+    .header_title_br {
+        margin-top: 0;
+        padding-left: 6rem;
     }
 
     .app_buttons {
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .app_store_btn {
+        margin: 0;
     }
 
     .market_logo {
@@ -354,6 +382,7 @@ div.square_numerator {
         text-decoration: none;
         background-color: #5e42b0;
         width: 45%;
+        max-width: 20rem;
         height: 4.75rem;
         border-radius: 4.75rem;
         font-family: OpenSans-Regular;
@@ -364,17 +393,28 @@ div.square_numerator {
         z-index: 2;  
     }
 
-    h2 {
+    .article_content {
+        padding-top: 4.5rem;
+    }
+
+
+    .article_logo {
+        position: absolute;
+        padding-top: 7rem;
+        left: 0;
+        transform: translate(-35%);
+    }
+
+    .article_title {
         font-size: 5rem;
         padding: 0 2rem;
-        margin-top: 5.25rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2.5rem;
         padding-left: 40%;
     }
     
-    h3 {
+    .sub_block_title {
         font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .numerator {
@@ -390,85 +430,85 @@ div.square_numerator {
         border-radius: 0.313rem;
     }
     
-    p {
-        font-family: OpenSans-Regular;
+    .sub_block_text {
         font-size: 1rem;
     }
+    
+    .sub_block {
+        padding: 2rem 2rem;
+        padding-left: 40%;
+    }
 
-    .article_logo {
-        position: absolute;
-        padding-top: 1rem;
-        left: 0;
-        transform: translate(-35%);
+    .players .sub_block {
+        padding-left: 2rem;
+        padding-right: 40%;
     }
 
     .connection {
         background-color: #fff;
+        padding-top: 0;
     }
-
-    .connection, .collaboration, .growth {
-        padding: 2.5rem 2rem;
-        padding-left: 40%;
-    }
-
-    .players .connection, .players .collaboration, .players .growth {
-        padding: 2.5rem 2rem;
-        padding-right: 40%;
-    }
-
-    .players h2 {
+    
+    .players .article_title {
         padding-right: 40%;
         padding-left: 2rem;
     }
 
     .players .article_logo {
         position: absolute;
-        margin-top: -1.5rem;
         right: 0;
         left: auto;
         transform: translate(0);
+        padding-top: 4rem;
     }
 
     .article_content_big_block {
-        padding: 0 2rem;
+        padding: 4rem 2rem 7.25rem;
+        margin: 0;
     }
 
-    .article_content_big_block h3 {
+    .full_logo {
+        margin: 0;
+    }
+
+    .big_block_title {
         font-size: 5rem;
         color: #e7e7e7;
-        margin-top: 3.25rem;
+        /* margin-top: 3.25rem; */
     }
 
-    div.square_numerator {
-        top: -10rem;
+    .square_numerator {
         width: 7.25rem;
         height: 7.25rem;
+        top: -6rem;
     }
 
-    .article_content_big_block p {
+    .big_block_text {
         font-size: 1.5rem;
     }
     
-    
     .footer {
-        padding: 0 2rem 1.5rem;
+        padding: 7.5rem 2rem 1.5rem;
         background-image: url("../images/game_1920.jpg");
         background-position: right bottom;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    .footer h2 {
+    .logo_n_caption {
+        margin-bottom: 17.75rem;
+    }
+
+    .footer_title {
         font-size: 5rem;
         padding: 0;
         z-index: 2;
     }
     
-    .footer h3 {
+    .footer_subtitle {
         font-family: OpenSans-Regular;
         font-size: 2rem;
         padding: 0;
-        margin-bottom: 17.75rem;
         color: #9b8ec1;
         z-index: 2;
     }
@@ -478,12 +518,11 @@ div.square_numerator {
         height: 8.5rem;
         border-radius: 2rem;
         display: flex;
-        margin-top: 6.5rem;
         margin-bottom: 3.75rem;
         z-index: 2;
     }
-    
-    .footer .google_play_btn {
+
+    .footer .app_buttons {
         margin-bottom: 5rem;
     }
     
@@ -496,13 +535,13 @@ div.square_numerator {
 
 @media (min-width: 960px) {
 
-    .surface_logo_text {
+    .header_logo_link, .footer_logo_link {
         width: 12.17%;
         min-width: 10rem;
     }
 
     .header {
-        padding: 2.75rem 11.25rem 6.25rem;
+        padding: 2.75rem 10% 6.25rem;
         background-image: url("../images/football_1920.jpg");
         background-repeat: no-repeat;
         background-position: center top;
@@ -510,21 +549,21 @@ div.square_numerator {
         align-items: center;
     }   
    
-    h1 {
+    .header_title {
         font-size: 5.75rem;
-        line-height: 5.75rem;
         padding: 0 1rem;
         width: 100%;
         margin-top: 18rem;
         margin-bottom: 14rem;
     }
 
-    h1 span:last-child {
+    .header_title_br {
         padding-left: 27%;
     }
 
     .app_buttons {
         display: flex;
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -546,7 +585,8 @@ div.square_numerator {
         text-decoration: none;
         background-color: #5e42b0;
         width: 20%;
-        min-width: 15rem;
+        max-width: initial;
+        min-width: 20rem;
         height: 4.75rem;
         border-radius: 4.75rem;
         font-family: OpenSans-Regular;
@@ -554,19 +594,20 @@ div.square_numerator {
         padding-left: 3.25rem;   
     }
 
-    h2 {
+    .article_content {
+        padding-top: 7.25rem;
+    }
+
+    .article_title {
         font-size: 5rem;
         padding: 0 2rem;
-        margin-top: 7.25rem;
         margin-bottom: 3rem;
         padding-left: 55%;
-        line-height: 3.75rem;
     }
     
-    h3 {
+    .sub_block_title {
         font-size: 2.25rem;
         margin-bottom: 2rem;
-        line-height: 2rem;
     }
     
     .numerator {
@@ -599,8 +640,8 @@ div.square_numerator {
         background-color: #fff;
     }
 
-    .connection, .collaboration, .growth {
-        padding: 3.75rem 11.25rem;
+    .sub_block {
+        padding: 3.75rem 10%;
         padding-left: 55%;
     }
 
@@ -609,9 +650,9 @@ div.square_numerator {
         padding-right: 55%;
     }
 
-    .players h2 {
+    .players .article_title {
         padding-right: 55%;
-        padding-left: 11.25rem;
+        padding-left: 10%;
     }
 
     .players .article_logo {
@@ -643,21 +684,22 @@ div.square_numerator {
 
     .article_content_big_block {
         padding: 0; 
-        padding-right: 11.25rem;
-        padding-left: 8rem;
+        padding-right: 10%;
+        padding-left: 8.25rem;
         width: 50%;
         margin: auto;
     }
 
     .article_big_block:nth-child(even) .article_content_big_block {
-        padding-left: 11.25rem;
-        padding-right: 8rem;
+        padding-left: 10%;
+        padding-right: 8.25rem;
     }
 
-    .article_content_big_block h3 {
-        font-size: 5rem;
+    .big_block_title {
+        /* font-size: 5rem; */
+        font-size: 4.167vw;
         color: #e7e7e7;
-        margin-bottom: 7.25rem;
+        margin-bottom: 4.5rem;
     }
 
     div.square_numerator {
@@ -678,27 +720,24 @@ div.square_numerator {
     
     
     .footer {
-        padding: 0 2rem 1.5rem;
+        padding: 14.25rem 2rem 1.5rem;
         background-image: url("../images/game_1920.jpg");
         background-position: right bottom;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    .footer h2 {
+    .footer_title {
         font-size: 5rem;
         padding: 0;
-        line-height: 3.75rem;
         z-index: 2;
         margin: 0;
     }
     
-    .footer h3 {
+    .footer_subtitle {
         font-family: OpenSans-Regular;
         font-size: 2rem;
-        line-height: 2rem;
         padding: 0;
-        margin: 1.5rem 0 0;
         color: #9b8ec1;
         z-index: 2;
     }
@@ -708,8 +747,7 @@ div.square_numerator {
         flex-direction: row;
         z-index: 2;
         align-items: center;
-        margin: 14.25rem 0 9.5rem;
-
+        margin-bottom: 9.5rem;
     }
 
     .surface_logo_wrapper {
@@ -722,10 +760,11 @@ div.square_numerator {
     }
 
     .caption_footer {
+        align-items: flex-start;
         margin-left: 2rem;
     }
     
-    .footer .google_play_btn {
+    .footer .app_buttons {
         margin-bottom: 16rem;
     }
     
