@@ -747,7 +747,7 @@ body {
         display: flex;
         flex-direction: row;
         z-index: 2;
-        align-items: center;
+        align-items: flex-end;
         margin-bottom: 9.5rem;
     }
 
